@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'firebase_options.dart';
+import 'screens/astrology/astrology_trinity_draw_screen.dart'; // 導入新頁面
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
       home: const HomePage(),
       routes: {
         '/quiz': (context) => const QuizPage(),
+        '/astrology_trinity': (context) => const AstrologyTrinityDrawScreen(), // 註冊新路由
       },
     );
   }
@@ -106,7 +108,8 @@ class HomePage extends StatelessWidget {
                   buttonText: '抽一張牌',
                   buttonColor: const Color(0xFF0081A7),
                   onPressed: () {
-                    // TODO: 導航到占星牌卡頁面
+                    // 修改這裡，導航到占星牌卡頁面
+                    Navigator.pushNamed(context, '/astrology_trinity');
                   },
                 ),
                 const SizedBox(height: 24),

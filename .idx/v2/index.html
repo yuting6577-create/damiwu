@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Oracle 2025</title>
+    <link rel="stylesheet" href="astrology.css">
+</head>
+<body>
+    <div class="oracle-container">
+        <header>
+            <h1 id="main-title">COSMIC ORACLE</h1>
+            <div class="lang-switcher">
+                <button id="lang-zh">中文</button>
+                <button id="lang-en">ENGLISH</button>
+            </div>
+        </header>
+        <div class="card-display">
+            <div class="card" id="card-sign"><div class="card-icon">★</div><div class="card-text"></div></div>
+            <div class="card" id="card-planet"><div class="card-icon">★</div><div class="card-text"></div></div>
+            <div class="card" id="card-house"><div class="card-icon">★</div><div class="card-text"></div></div>
+        </div>
+        <button class="divination-button" id="start-btn">START DIVINATION</button>
+    </div>
+    <script type="module">
+        // 暴力破除緩存：強制加載帶時間戳的 JS
+        import(`./astrology.js?v=${new Date().getTime()}`);
+    </script>
+</body>
+</html>
